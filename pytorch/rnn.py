@@ -4,8 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np 
 
-from utils import ALL_LETTERS , N_LETTERS 
-from utils import load_data , letter_to_tensor , line_to_tensor , random_training_example 
 
 class RNN(nn.Module):
     # nn.RNN 
@@ -30,7 +28,3 @@ class RNN(nn.Module):
     def init_hidden(self):
         return torch.zeros(1,self.hidden_size)
 
-category_lines , all_categories  = load_data()
-n_categories = len(all_categories)
-
-print(n_categories)
